@@ -7,9 +7,13 @@
 </head>
 <body>
 <div>
-    <th:block th:each="msg : ${carList}">
-        <h1 th:text="${msg}"></h1>
-    </th:block>
+    <table th:border="1">
+        <tr th:each="car : ${carList}">
+            <td><h1 th:text="${car.getId()}"></h1></td>
+            <td><h1 th:text="${car.getModel()}"></h1></td>
+            <td><h1 th:text="${car.getColor()}"></h1></td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>
